@@ -21,7 +21,10 @@ LISTING_PRICE = int(os.getenv("LISTING_PRICE", "5000"))  # Keyingi e'lonlar narx
 VIEW_CONTACT_PRICE = int(os.getenv("VIEW_CONTACT_PRICE", "5000"))  # Sotuvchi kontaktini ko'rish narxi
 
 # --- Google Vision OCR ---
-# Railway/Render'da bu faylni Environment Variable orqali yoki Secret File sifatida yuklaysiz
+# Ikki usuldan biri bilan beriladi:
+# 1) GOOGLE_CREDENTIALS_JSON - JSON matnining o'zi (Railway Variables'ga to'g'ridan-to'g'ri nusxalanadi)
+# 2) GOOGLE_CREDENTIALS_PATH - fayl manzili (agar serverga fayl sifatida yuklangan bo'lsa)
+GOOGLE_CREDENTIALS_JSON = os.getenv("GOOGLE_CREDENTIALS_JSON", "")
 GOOGLE_CREDENTIALS_PATH = os.getenv("GOOGLE_CREDENTIALS_PATH", "google_credentials.json")
 
 # --- Ma'lumotlar bazasi ---
